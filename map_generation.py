@@ -1,16 +1,16 @@
 # This file holds map generation library
 import random
+from enum import Enum
 
-class Tile:
-    # TODO: Make this a kind of enumeration class
-    # so that you have list and stuff automatically
+class Tile(Enum):
     BLANK=0
     SLIDER=1
     LADDER=2
     BLUE=3
     RED=4
     SPICY=5
-    LIST=[0, 1, 2, 3, 4, 5]
+    START=6
+    END=7
 
 class Map:
     def __init__(self, columns, rows):
@@ -22,18 +22,19 @@ class Map:
     def generate(self):
         self.map = []
         row = []
-        # List with tile types
-        # TODO: next should be an enumration list from above
-        tile_type = [
-                Tile.BLANK,
-                Tile.SLIDER,
-                Tile.LADDER
-                ]
         for i in range(self.rows):
             row = []
             for j in range(self.columns):
-                row.append(random.choice(tile_type))
+                # Remove START and END elements
+                tile_list = [e for e in Tile]
+                idx = tile_list.index(Tile.START)
+                tile_list.pop(idx)
+                idx = tile_list.index(Tile.END)
+                tile_list.pop(idx)
+                row.append(random.choice(tile_list))
             self.map.append(row)
+        self.map[0][0] = Tile.START
+        self.map[self.rows-1][self.columns-1] = Tile.END
         return self.map
 
     def show(self):
@@ -48,7 +49,7 @@ class Map:
     def get_tile_type(self, index):
         if index >= (self.rows * self.columns):
             # TODO: create custom exception class
-            raise("Wrong index")
+            raise(Exception("Wrong index"))
         i = index // self.rows
         j = (index % self.columns)
         # TODO: Remove following print
@@ -61,12 +62,14 @@ class Map:
 
 
 if __name__ == "__main__":
-    new_map = Map(5, 5)
+    COLUMNS = 9
+    ROWS = 10
+    new_map = Map(ROWS, COLUMNS)
     print(F"new map = \n{new_map}")
     print(F"{new_map.get_tile_type(0)}")
     print(F"{new_map.get_tile_type(7)}")
     print(F"{new_map.get_tile_type(24)}")
     try:
-        print(F"{new_map.get_tile_type(25)}")
+        print(F"{new_map.get_tile_type(78)}")
     except Exception as e:
         print(F"Error: {e}")
