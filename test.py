@@ -1,6 +1,10 @@
 from map_generation import *
 
-if __name__ == "__main__":
+def main():
+    """! Main program entry.
+
+    TODO: Update this to be a pytest instance
+    """
     new_map = Map(10,10)
     print(F"Map generated = {new_map}")
     current_tile = Tile(start=True)
@@ -16,3 +20,6 @@ if __name__ == "__main__":
             input()
     print(F"THANKS FOR PLAYING")
 
+
+if __name__ == "__main__":
+    main()
