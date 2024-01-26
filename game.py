@@ -11,11 +11,9 @@ if __name__ == "__main__":
         dice_number = int(input())
         pos += dice_number
         current_tile = new_map.get_tile(pos)
-        print(F"MOVE = {current_tile.action()}")
-        print(F"ACTION = {current_tile.type}")
-        if (current_tile.type == TileType.SLIDER) or (current_tile.type == TileType.LADDER):
-            print(F"Moving thru slider ({current_tile.move}), press enter")
-            input()
         pos += current_tile.action()
+        if (current_tile.type == TileType.SLIDER) or (current_tile.type == TileType.LADDER):
+            print(F"PRESS ENTER")
+            input()
     print(F"THANKS FOR PLAYING")
 

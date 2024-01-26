@@ -38,8 +38,20 @@ class Tile:
 
     def action(self):
         # When tile is type SLIDER or LADDER return move member
-        if self.type == TileType.SLIDER or self.type == TileType.LADDER:
+        if self.type == TileType.LADDER:
+            print(F"THIS IS A LADDER, MOVE FORWARD {self.move}")
             return self.move
+        if self.type == TileType.SLIDER:
+            print(F"THIS IS A SLIDER, MOVE BACKWARDS {-self.move}")
+            return self.move
+        if self.type == TileType.BLUE:
+           print("BLUE TILE, SOMETHING GOOD THING HAPPENS") 
+        if self.type == TileType.RED:
+           print("RED TILE, SOMETHING BAD THING HAPPENS")
+        if self.type == TileType.BLANK:
+           print("BLANK TILE,NOTHING HAPPENS")
+        if self.type == TileType.SPICY:
+           print("SPICY TILE, SOMTHING WILL HAPPEN")
         # TODO: get card
         # When there is no moving action return 0
         return 0
