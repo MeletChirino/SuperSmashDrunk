@@ -2,6 +2,7 @@
 import random
 from enum import Enum
 
+# Type of tiles used on game
 class TileType(Enum):
     BLANK=0
     SLIDER=1
@@ -12,6 +13,7 @@ class TileType(Enum):
     START=6
     END=7
 
+# Class that defines a Tile and its actions
 class Tile:
     def __init__(self, **kwargs):
         self.move = 0
@@ -37,24 +39,25 @@ class Tile:
         
 
     def action(self):
-        # When tile is type SLIDER or LADDER return move member
-        if self.type == TileType.LADDER:
-            print(F"THIS IS A LADDER, MOVE FORWARD {self.move}")
-            return self.move
-        if self.type == TileType.SLIDER:
-            print(F"THIS IS A SLIDER, MOVE BACKWARDS {-self.move}")
-            return self.move
-        if self.type == TileType.BLUE:
-           print("BLUE TILE, SOMETHING GOOD THING HAPPENS") 
-        if self.type == TileType.RED:
-           print("RED TILE, SOMETHING BAD THING HAPPENS")
-        if self.type == TileType.BLANK:
-           print("BLANK TILE,NOTHING HAPPENS")
-        if self.type == TileType.SPICY:
-           print("SPICY TILE, SOMTHING WILL HAPPEN")
+        # This method returns a message and movement of an actions
         # TODO: get card
-        # When there is no moving action return 0
-        return 0
+        if self.type == TileType.LADDER:
+            message = F"THIS IS A LADDER, MOVE FORWARD {self.move}"
+        if self.type == TileType.SLIDER:
+            message = F"THIS IS A SLIDER, MOVE BACKWARDS {-self.move}"
+        if self.type == TileType.BLUE:
+            message = "BLUE TILE, SOMETHING GOOD THING HAPPENS"
+        if self.type == TileType.RED:
+            message = "RED TILE, SOMETHING BAD THING HAPPENS"
+        if self.type == TileType.BLANK:
+            message = "BLANK TILE NOTHING HAPPENS"
+        if self.type == TileType.SPICY:
+            message = "SPICY TILE, SOMETHING WILL HAPPEN"
+        action_dict = {
+                "move": self.move,
+                "message": message
+                }
+        return action_dict
 
     def __str__(self):
         return F"{self.type.name}"

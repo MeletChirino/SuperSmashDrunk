@@ -8,8 +8,7 @@ if __name__ == "__main__":
     while(not (current_tile.type == TileType.END)):
         print(F"----\nPOSITION = {pos}")
         print(F"PLEASE INPUT DICE NUMBER")
-        dice_number = int(input())
-        pos += dice_number
+        pos = int(input())
         current_tile = new_map.get_tile(pos)
         pos += current_tile.action()
         if (current_tile.type == TileType.SLIDER) or (current_tile.type == TileType.LADDER):
