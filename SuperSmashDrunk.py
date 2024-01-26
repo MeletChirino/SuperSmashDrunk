@@ -41,6 +41,7 @@
 # Imports
 import random
 from enum import Enum
+import xml.etree.ElementTree as ET
 
 # Type of tiles used on game
 class TileType(Enum):
@@ -80,7 +81,7 @@ class Tile:
         elif kwargs.get("end"):
             self.type = TileType.END
             return
-        
+
         # Pop START and END from tiletype
         tile_list = [e for e in TileType]
         idx = tile_list.index(TileType.START)
@@ -93,7 +94,7 @@ class Tile:
             self.move -= random.randint(0, 10)
         elif self.type == TileType.LADDER:
             self.move += random.randint(0, 10)
-        
+
 
     def action(self):
         """! This holds action of tile depending on its type.
@@ -103,7 +104,7 @@ class Tile:
         player's position.
         """
         # This method returns a message and movement of an actions
-        # TODO: get card
+        message = ''
         if self.type == TileType.LADDER:
             message = F"THIS IS A LADDER, MOVE FORWARD {self.move}"
         if self.type == TileType.SLIDER:
@@ -178,7 +179,7 @@ class Map:
         i = index // self.rows
         j = (index % self.columns)
         return self.map[i][j]
-    
+
     def __str__(self):
         """! Retrieves Map's description."""
         string = ""
@@ -188,7 +189,31 @@ class Map:
                 string += str(self.map[i][j]) + ", "
             string += "]\n"
         return string
-        
+
+# Global constants
+ID = 0
+NAME = 1
+DESCRIPTION = 2
+
+class Card:
+    def __init__(self, name, description):
+        self.name = name
+        self.description = description
+    def __str__(self):
+        return self.name
+
+def load_deck(file):
+    deck = []
+    root = ET.parse(file)
+    root_node = root.getroot()
+    for card in root_node:
+        new_card = Card(
+                card[NAME].text,
+                card[DESCRIPTION].text
+                )
+        deck.append(new_card)
+    return deck
+
 def main():
     """! Main program entry.
 

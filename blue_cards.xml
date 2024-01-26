@@ -1,0 +1,23 @@
+<!--Database of blue cards -->
+<blue_deck>
+	<card>
+		<id>1</id>
+		<name>Shot</name>
+		<description> You have found a shot, drink it!</description>
+	</card>
+	<card>
+		<id>2</id>
+		<name>Oasis</name>
+		<description>You found an oasis and now is yours, if person steps in person will pay your price</description>
+	</card>
+	<card>
+		<id>3</id>
+		<name>Shot to right</name>
+		<description>You have found a shot, give it to the one on your right!</description>
+	</card>
+	<card>
+		<id>3</id>
+		<name>Shot to left</name>
+		<description>You have found a shot, give it to the one on your left!</description>
+	</card>
+</blue_deck>
