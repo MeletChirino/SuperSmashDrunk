@@ -1,23 +1,79 @@
 <!--Database of blue cards -->
 <blue_deck>
-	<card>
-		<id>1</id>
+	<card spicy="0">
 		<name>Shot</name>
 		<description> You have found a shot, drink it!</description>
 	</card>
-	<card>
-		<id>2</id>
+	<card spicy="0">
 		<name>Oasis</name>
 		<description>You found an oasis and now is yours, if person steps in person will pay your price</description>
 	</card>
 	<card>
-		<id>3</id>
 		<name>Shot to right</name>
 		<description>You have found a shot, give it to the one on your right!</description>
 	</card>
 	<card>
-		<id>3</id>
 		<name>Shot to left</name>
 		<description>You have found a shot, give it to the one on your left!</description>
+	</card>
+	<card>
+		<name>Love Love</name>
+		<description>Couples drink</description>
+	</card>
+	<card>
+		<name>Boost</name>
+		<description>Roll dices once again</description>
+	</card>
+	<card>
+		<name>Dogs refugee</name>
+		<description>Dog owners drink, but you</description>
+	</card>
+	<card>
+		<name>Happy FOMO</name>
+		<description>Everyone drinks but you</description>
+	</card>
+	<card>
+		<name>Police assault</name>
+		<description>Everyone who's been arrested drink, except you</description>
+	</card>
+	<card>
+		<name>Ryan soldier</name>
+		<description>All men drink, except you</description>
+	</card>
+	<card>
+		<name>Ruler</name>
+		<description>Make a rule</description>
+	</card>
+	<card>
+		<name>Water Well</name>
+		<description>Water creates life, go drink water</description>
+	</card>
+	<card>
+		<name>Slavery is back</name>
+		<description>Use a whimp to order other players to drink</description>
+	</card>
+	<card>
+		<name>Block</name>
+		<description>Next player is skipped, and drinks</description>
+	</card>
+	<card>
+		<name>Extremes</name>
+		<description>Tallest and shortest person drink and sit nest to each other</description>
+	</card>
+	<card>
+		<name>Switch places</name>
+		<description>Pick a person and switch places. The chosen one drinks</description>
+	</card>
+	<card>
+		<name>Drink a Shot</name>
+		<description>Drink something tasty</description>
+	</card>
+	<card>
+		<name>Make a memory</name>
+		<description>Make photo of the group, ugliest one drinks</description>
+	</card>
+	<card>
+		<name>Truth or dare</name>
+		<description>Pick someone or and play truth or dare</description>
 	</card>
 </blue_deck>

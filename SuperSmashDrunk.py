@@ -30,8 +30,6 @@
 # @section notes_SuperSmashDrunk_notes Notes
 # - Prealfa version holds very basic things
 # @section todo_SuperSmashDrunk_main TODO
-# - Implement CowSay library
-# - Add Cards on xml format
 #
 # @section author_SuperSmashDrunk_main Author(s)
 # - Created by Melet Chirino on 25/01/2024
@@ -121,6 +119,7 @@ class Tile:
                 "move": self.move,
                 "message": message
                 }
+        print(message)
         return action_dict
 
     def __str__(self):
@@ -215,9 +214,8 @@ def load_deck(file):
     @return  A list of Card instances, basically a deck of cards.
     """
     # Constants holding information of a card
-    ID = 0
-    NAME = 1
-    DESCRIPTION = 2
+    NAME = 0
+    DESCRIPTION = 1
     # Empty list will be filled later
     deck = []
     # Parse xml file

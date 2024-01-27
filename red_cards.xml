@@ -1,0 +1,131 @@
+
+<!--Database of red cards -->
+<red_deck>
+<card>
+	<name>Tattooed</name>
+	<description>Drink if you have a tattoo</description>
+</card>
+<card>
+	<name>Whistle</name>
+	<description>Whistle or drink twice</description>
+</card>
+<card>
+	<name>Mr Lonely</name>
+	<description>If you're single you drink, if not your couple drinks</description>
+</card>
+<card>
+	<name>Strong throat</name>
+	<description>Empty whaterever you're drinking right now</description>
+</card>
+<card>
+	<name>Hughie</name>
+	<description>Hugh person on your right until next turn, if not drink tree shots.</description>
+</card>
+<card rule="1">
+	<name>Hand inclusive</name>
+	<description>From now on nobody is allowed to use right hand to roll dice or drink.</description>
+</card>
+<card rule="1">
+	<name>Criss cross</name>
+	<description>From now on nobody is allowed to cross hands or feet</description>
+</card>
+<card>
+	<name>Reverse</name>
+	<description>Reverse</description>
+</card>
+<card>
+	<name>Al perro mas flaco se le pegan las pulgas</name>
+	<description>Person who have drunk the most, drinks again.</description>
+</card>
+<card>
+	<name>Karma</name>
+	<description>Person who have drunk the less drinks,</description>
+</card>
+<card spicy="4">
+	<name>Insuline</name>
+	<description>Add sugar (or salt) on somebody else and lick it. Group picks the person.</description>
+</card>
+<card>
+	<name>Push up</name>
+	<description>Do 10 push ups</description>
+</card>
+<card>
+	<name>Burpees</name>
+	<description>Do 10 Burpees</description>
+</card>
+<card>
+	<name>Legs flex</name>
+	<description>Do 10 leg flexs</description>
+</card>
+<card>
+	<name>Big open mouth</name>
+	<description>You can't close your mouth until next turn, you drink a shot for every time you close it.</description>
+</card>
+<card>
+	<name>Ugly Pick</name>
+	<description>Take an ugly pick of the group and everyone must share on social network. Who refuses drinks a shot</description>
+</card>
+<card>
+	<name>Foreign person</name>
+	<description>Change your accent for five minutes, drink a shot everytime you speak with regular accent</description>
+</card>
+<card>
+	<name>Late Karma</name>
+	<description>Person who's always late drinks a shot, and you</description>
+</card>
+<card>
+	<name>Duck duck goose</name>
+	<description>Play duck duck goose, people next to the looser drinks as well.</description>
+</card>
+<card>
+	<name>Physical test</name>
+	<description>Try to lift person next to you, if you cant you drink 3 shots</description>
+</card>
+<card>
+	<name>Dice Rules 1</name>
+	<description>Roll a dice:
+		1 drink if you're wearing a necklace
+		2 drink if have lipstick on
+		3 drink if you're wearing a belt
+		4 drink if you like chocolate
+		5 drink if you're studying
+		6 drink if you have a condom with you
+</description>
+</card>
+<card>
+	<name>Addicts to phone</name>
+	<description>Those who are using their phones right now drinks</description>
+</card>
+<card>
+	<name>Twerk or drink</name>
+	<description>Twerk or drink</description>
+</card>
+<card>
+	<name>Truth or dare</name>
+	<description>Truth or dare</description>
+</card>
+<card>
+	<name>Addicts to phone 2</name>
+	<description>Next person who uses their phone drinks</description>
+</card>
+<card>
+	<name>Oldest</name>
+	<description>People born last century drink, if you were born later drink twice</description>
+</card>
+<card>
+	<name>Siblings</name>
+	<description>People who have siblings drinks, if you don't drink twice (and go have several children)</description>
+</card>
+<card>
+	<name>Milenials</name>
+	<description>People born this century drinks, if are older drink twice</description>
+</card>
+<card>
+	<name>Single era</name>
+	<description>Single people drink, if you are single drink twice</description>
+</card>
+<card>
+	<name>Single era</name>
+	<description>Single people drink, if you are single drink twice</description>
+</card>
+</red_deck>
