@@ -190,23 +190,41 @@ class Map:
             string += "]\n"
         return string
 
-# Global constants
-ID = 0
-NAME = 1
-DESCRIPTION = 2
-
 class Card:
+    """! Card class
+
+    Define a card
+    """
     def __init__(self, name, description):
+        """! Card class initializer.
+
+        @param name  Name of the card.
+        @param description  Action of the card
+        @return An instance of card class.
+        """
         self.name = name
         self.description = description
     def __str__(self):
         return self.name
 
 def load_deck(file):
+    """! Function that parses an xml file.
+
+    @param file  File to be parsed and the transformed on Card list.
+
+    @return  A list of Card instances, basically a deck of cards.
+    """
+    # Constants holding information of a card
+    ID = 0
+    NAME = 1
+    DESCRIPTION = 2
+    # Empty list will be filled later
     deck = []
+    # Parse xml file
     root = ET.parse(file)
     root_node = root.getroot()
     for card in root_node:
+        # Fill deck with new cards
         new_card = Card(
                 card[NAME].text,
                 card[DESCRIPTION].text
